@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>WOT OCR — Interaktywne ramki</title>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Tesseract.js -->
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@4.0.2/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="panel">
+    <h2>WOT OCR → Interaktywne ramki (resize + drag)</h2>
+    <input type="file" id="fileInput" accept="image/*">
+    <button class="btn" id="analyzeBtn">Przeanalizuj</button>
+
+    <canvas id="canvas"></canvas>
+
+    <h3>Wyniki</h3>
+    <label>DMG</label>
+    <input type="number" id="dmgInput">
+    <label>Fragi</label>
+    <input type="number" id="fragsInput">
+    <label>Medale</label>
+    <textarea id="medalsInput"></textarea>
+
+    <p id="status"></p>
+  </div>
+
+  <!-- Logika -->
+  <script src="app.js"></script>
+</body>
+</html>
